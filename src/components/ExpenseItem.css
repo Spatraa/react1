@@ -1,0 +1,13 @@
+.expense-item{
+    display: flex;
+    background-color: grey;
+}
+/* .expense-item-description{
+    display: flex;
+} */
+.description{
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+}

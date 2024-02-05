@@ -1,19 +1,23 @@
 import './ExpenseItem.css';
+import './ExpenseDate';
+import {useState} from 'react';
+import ExpenseDate from './ExpenseDate';
 function ExpenseItem(props){
-    const month=props.date.toLocaleString('en-US',{month:'long'});
-    const day=props.date.toLocaleString('en-US',{day:'2-digit'});
-    const year=props.date.getFullYear();
+    const[deleted,setDelete]=useState(false);
+    const clickHandler=()=>{
+     setDelete(true);
+    }
+    if(deleted){
+        return null;
+    }
     return(
         <div className="expense__item">
-         <div >
-         <div>{month}</div>
-         <div>{year}</div>
-         <div>{day}</div>
-         </div>
+         <ExpenseDate date={props.date}/>
             <div className='expense__description'>
              <h2>{props.title}</h2>
-             <div className='expense__price'>{props.amount}</div>
+             <div className='expense__price'>${props.amount}</div>
             </div>
+            <button onClick={clickHandler}>Change Title</button>
         </div>
     )
 }

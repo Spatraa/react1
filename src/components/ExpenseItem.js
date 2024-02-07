@@ -6,10 +6,10 @@ function ExpenseItem(props){
     // const[deleted,setDelete]=useState(false);
    const[title,setTitle]=useState(props.title);
 
-   const handler=()=>{
-    setTitle("Updated");
-    console.log(title);
-   }
+//    const handler=()=>{
+//     setTitle("Updated");
+//     console.log(title);
+//    }
     // const clickHandler=()=>{
     //  setDelete(true);
     // }
@@ -23,7 +23,7 @@ function ExpenseItem(props){
              <h2>{title}</h2>
              <div className='expense__price'>${props.amount}</div>
             </div>
-            <button onClick={handler}>Change Title</button>
+            <button>Change Title</button>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import ExpenseItem from "./components/ExpenseItem";
 import NewExpense from "./components/NewExpense/NewExpense";
 
+
 function App() {
   const expense = [
     { title: 'Car Insurance', amount: 295, date: new Date(2024, 2, 2) },
